@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const getAllDeparments = require('./lib/department');
 const getAllRoles = require('./lib/role');
+const getAllEmployees = require('./lib/employee');
 
 const mainQuestionOptions = [
     'view all departments', 'view all roles', 'view all employees', 'add a department', 'add a role', 'add an employee', 'update an employee role', 'leave'
@@ -19,12 +20,13 @@ const promptWhatToDo = () => {
 const showNext = ({ option }) => {
     switch (option) {
         case 'view all departments':
-            getAllDeparments().catch(err => console.log('An error ocurred, try again later')).then(showMainMenu);
+            getAllDeparments().catch(err => console.log('An error ocurred, try again later', err)).then(showMainMenu);
             break;
         case 'view all roles':
-            getAllRoles().catch(err => console.log('An error ocurred, try again later')).then(showMainMenu);
+            getAllRoles().catch(err => console.log('An error ocurred, try again later', err)).then(showMainMenu);
             break;
         case 'view all employees':
+            getAllEmployees().catch(err => console.log('An error ocurred, try again later', err)).then(showMainMenu);
             break;
         case 'add a department':
             break;

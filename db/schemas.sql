@@ -21,7 +21,7 @@ CREATE TABLE employees (
   job INTEGER NOT NULL,
   department INTEGER NOT NULL,
   salary INTEGER NOT NULL,
-  manager INTEGER NOT NULL,
+  manager INTEGER,
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT fk_employee_role FOREIGN KEY (job) REFERENCES roles(id),
   CONSTRAINT fk_employee_department FOREIGN KEY (department) REFERENCES departments(id)
