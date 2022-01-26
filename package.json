@@ -1,0 +1,31 @@
+{
+  "name": "employeedb",
+  "version": "1.0.0",
+  "description": "A nodejs application creating a database with employees",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krausyd/employeeDb.git"
+  },
+  "keywords": [
+    "nodejs",
+    "inquirer",
+    "mysql",
+    "mysql2"
+  ],
+  "author": "krausyd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krausyd/employeeDb/issues"
+  },
+  "homepage": "https://github.com/krausyd/employeeDb#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.2.0",
+    "mysql2": "^2.3.3"
+  }
+}
