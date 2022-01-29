@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const { getAllDeparments, promptNewDapartment } = require('./lib/department');
+const { getAllDeparments, promptNewDapartment, getEmployeesByDeparment } = require('./lib/department');
 const { getAllRoles, addNewRole } = require('./lib/role');
 const { getAllEmployees, addNewEmployee, updateEmployeeRole, updateEmployeeManager, getEmployeesByManager } = require('./lib/employee');
 
@@ -13,6 +13,7 @@ const mainQuestionOptions = [
     'update an employee role',
     'update an employee manager',
     'get employees by manager',
+    'get employees by department',
     'leave'
 ]
 const mainQuestion = {
@@ -54,6 +55,9 @@ const showNext = ({ option }) => {
             break;
         case 'get employees by manager':
             getEmployeesByManager().catch(err => console.log('An error ocurred, try again later', err)).then(showMainMenu);
+            break;
+        case 'get employees by department':
+            getEmployeesByDeparment().catch(err => console.log('An error ocurred, try again later', err)).then(showMainMenu);
             break;
         case 'leave':
             console.log('Thanks for using the system!');
