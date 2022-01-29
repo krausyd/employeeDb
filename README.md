@@ -21,7 +21,7 @@ THEN I am prompted to select an employee to update and their new role and this i
 
 extra:   
 [x] Update employee managers.   
-View employees by manager.   
+[x] View employees by manager.   
 View employees by department.   
 Delete departments, roles, and employees.   
 View the total utilized budget of a department—in other words, the combined salaries of all employees in that department.
